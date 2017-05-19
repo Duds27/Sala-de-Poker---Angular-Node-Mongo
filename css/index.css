@@ -1,0 +1,20 @@
+.jumbotron {
+    text-align: center;
+}
+
+h1 {
+    margin: 40px;
+}
+
+.table {
+    margin: 10px;
+}
+
+.table th {
+    text-align: center;
+}
+
+.selecionada {
+    background-color: grey;
+    font-weight: bold;
+}

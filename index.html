@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="pokerApp">
+
+<head>
+    <meta charset="utf-8">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/modules.js"></script>
+
+    <script type="text/javascript" src="js/scripts/controllers/controllerBase.js"></script>
+    <script type="text/javascript" src="js/scripts/controllers/controllerSalas.js"></script>
+</head>
+
+<body ng-controller="controllerBase">
+    <div ng-controller="controllerSalas" class="jumbotron">
+        <h1>Poker Facens</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Id Sala</th>
+                <th>Nome Sala</th>
+                <th>Privacidade</th>
+                <th>Quantidade de Jogadores</th>
+            </tr>
+            <tr ng-class="{selecionada: sala.select == 'true'}" ng-repeat="sala in salas">
+                <td>{{sala.id}}</td>
+                <td>{{sala.nome}}</td>
+                <td>{{sala.privacidade}}</td>
+                <td>{{sala.qtd}}</td>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+
+</html>
